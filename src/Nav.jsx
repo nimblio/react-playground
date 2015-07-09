@@ -13,7 +13,7 @@ export default class Nav extends Component {
     return (
       <nav className="NavBar">
         <ul>
-          {[for (i of this.props.menuItems) <li><Link to={i.to}>{i.text}</Link></li>]}
+          {[this.props.menuItems.map((i) => (<li><Link to={i.to}>{i.text}</Link></li>))]}
         </ul>
       </nav>
     );
